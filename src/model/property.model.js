@@ -1,0 +1,37 @@
+module.exports=(sequelize,Sequelize)=>{
+    const propertyModel=sequelize.define("property",{
+        id:{
+            type:Sequelize.BIGINT,
+            autoIncrement:true,
+            primaryKey:true,
+        },
+        propertyName:{
+            type:Sequelize.STRING
+        },
+        description:{
+            type:Sequelize.STRING
+        },
+        address:{
+            type:Sequelize.STRING
+        },
+        PropertyType:{
+            type:Sequelize.STRING
+        },
+        totalRooms:{
+            type:Sequelize.INTEGER
+        },
+        areaSqfeet:{
+            type:Sequelize.INTEGER
+        },
+        pricePerDay:{
+            type:Sequelize.INTEGER
+        },
+        isAvailable:{
+            type:Sequelize.BOOLEAN
+        },
+        flag:{
+            type:Sequelize.BOOLEAN
+        }
+    });
+    return propertyModel;
+}
